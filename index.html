@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập số 4 js (buổi 7 - 8)</title>
+</head>
+<!-- font  Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- CSS bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- Main css -->
+<link rel="stylesheet" href="./CSS/Main.css">
+
+<body>
+    <div class="container my-5 p-5 w-75 shadows-self-build" style="background-color: rgb(214, 211, 208);">
+        <div class="d-flex " id="themSo">
+            <input type="number" class="form-control w-25 ms-3" id="num">
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="addNumber">Thêm số</button>
+
+            <button class="btn btn-danger rounded-pill  px-4 ms-2" id="deleteNumber">Xoá số</button>
+        </div>
+        <div class="mt-3 alert alert-success ">
+            <i class="fa fa-hand-point-right"></i> <span id="ketQua"></span>
+        </div>
+
+        <!-- bài 1 -->
+        <h3 ><span>1</span> Tổng số dương</h3>
+        <div>
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="tinhTong">Tính Tổng</button>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span id="ketQua1"></span>
+            </div>
+        </div>
+        <!-- bài 2 -->
+        <h3><span>2</span> Đếm số dương</h3>
+        <div>
+
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="demSo">Đếm số</button>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span id="ketQua2"></span>
+            </div>
+        </div>
+        <!-- bài 3 -->
+        <h3><span>3</span> Tìm số nhỏ nhất</h3>
+        <div>
+
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="soNhoNhat">Tìm số nhỏ nhất</button>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span class="ketQua3" id="ketQua3"></span>
+            </div>
+        </div>
+        <!-- bài 4 -->
+        <h3><span>4</span> Tìm số dương nhỏ nhất</h3>
+        <div>
+
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="soDuongNhoNhat">Tìm số dương nhỏ
+                nhất</button>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span id="ketQua4"></span>
+            </div>
+        </div>
+        <!-- bài 5 -->
+        <h3><span>5</span> Tìm số chắn cuối cùng</h3>
+        <div>
+
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="timSoChan">Tìm số chẵn</button>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span id="ketQua5"></span>
+            </div>
+        </div>
+        <!-- bài 6-->
+        <h3><span>6</span> Đổi chỗ</h3>
+        <div>
+
+            <div class="d-flex justify-content-between mb-4">
+                <input type="number" class="form-control w-50 ms-3" placeholder="Nhập số  vị trí 1" id="viTri1">
+                <input type="number" class="form-control w-50 ms-3" placeholder="Nhập số  vị trí 2" id="viTri2">
+            </div>
+
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="doiCho">Đổi chỗ</button>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span id="ketQua6"></span>
+            </div>
+        </div>
+        <!-- bài 7 -->
+        <h3><span>7</span> Sắp sếp tăng dần</h3>
+        <div>
+
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="tangDan">Tìm số chẵn</button>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span id="ketQua7"></span>
+            </div>
+        </div>
+        <!-- bài 8 -->
+        <h3><span>8</span> Tìm số nguyên tố đầu tiên</h3>
+        <div>
+
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="soNTDau">Tìm số nguyên tố</button>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span id="ketQua8"></span>
+            </div>
+        </div>
+        <!-- bài 9 -->
+        <h3><span>9</span> Đếm số nguyên</h3>
+        <div>
+
+            <div class="form-group d-flex ">
+                <input type="number" class="form-control w-25 ms-3" placeholder="Nhập số" id="bai9NhapSo">
+                <button class="btn btn-primary rounded-pill  px-4 ms-2" id="bai9ThemSo">Thêm số</button>
+
+            </div>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span id="ketQua1So9"></span>
+            </div>
+
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="demSN">Điếm số nguyên</button>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span id="ketQua2So9"></span>
+            </div>
+
+        </div>
+        <!-- bài 10  -->
+        <h3><span>10</span> So sánh số lượng số âm và dương</h3>
+        <div>
+
+            <button class="btn btn-primary rounded-pill  px-4 ms-2" id="soSanh">So sánh</button>
+            <div class="mt-3 alert alert-success ">
+                <i class="fa fa-hand-point-right"></i> <span id="ketQua10"></span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+    <!-- metthoth -->
+    <script src="./JS/metthor.js"></script>
+    <!-- Main JS -->
+    <script src="./JS/Main.js"></script>
+</body>
+
+</html>

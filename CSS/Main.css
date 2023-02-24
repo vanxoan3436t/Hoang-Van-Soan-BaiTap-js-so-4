@@ -1,0 +1,9 @@
+.shadows-self-build .form-control,
+.shadows-self-build .form-select {
+    box-shadow: inset 3px 2px 3px 2px rgb(0 0 0 / 10%);
+}
+
+.shadows-self-build h3 {
+    margin-top: 30px;
+    border-top: 1px solid rgb(100, 96, 96);
+}
